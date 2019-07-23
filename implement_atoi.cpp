@@ -1,3 +1,23 @@
+my implementation
+int atoi(string str)
+{
+    int res=0;
+    int sign=1;
+    int i=0;
+    if(str[0]=='-'){
+        sign=-1;
+        i++;
+    }
+    for(;i<str.length();i++){
+        if(str[i]>='a'&& str[i]<='z'){
+            return -1;
+        }
+        res=res*10+str[i]-'0';
+    }
+    //Return result with sign 
+    return sign * res; 
+}
+-----------------------------------------------------------------------------
 using namespace std;
 int main()
  {
